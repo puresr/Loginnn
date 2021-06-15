@@ -5,7 +5,7 @@ import LoginForm from './component/LoginForm';
 
 function App() {
   const adminUser={
-    // email: "admin@admin.com",
+    email: "admin@admin.com",
     password: "P@$$W0RD"
   }
 
@@ -15,7 +15,7 @@ function App() {
   const Login = details=>{
     console.log('details');
 
-    if ( details.password == adminUser.password)  // details.email == adminUser.email && (ต้องใส่เมลตรง)
+    if (details.email == adminUser.email && details.password == adminUser.password)  //  (ต้องใส่เมลตรง)
     {
       console.log("Logged in");
       setUesr({
@@ -31,14 +31,16 @@ function App() {
   }
 
   const Logout = () => {
-    setUesr({name: "", email: ""});
+    setUesr({ email: ""});
   }
+
+  
 
   return (
     <div className = 'App'>
       {(user.email != '') ? (
         <div className='welcom'>
-          <h2>ยินดีต้อนรับ , <span>{user.name}</span></h2>
+          <h2>ยินดีต้อนรับ , <span>{user.email}</span></h2>
           <button onClick={Logout}>Logout</button>
         </div>
       ) : (
