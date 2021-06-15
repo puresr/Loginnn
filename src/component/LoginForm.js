@@ -23,11 +23,11 @@ function LoginForm({Login, error}){
                         </div> */}
                         <div className="form-group">
                             <label htmlFor="email">Email:</label>
-                            <input type="email" name="email" id="name" onChange={e => setDetails({...details, email: e.target.value})} value={details.email} autoComplete="off"/>
+                            <input type="email" name="email" id="name" onChange={e => setDetails({...details, email: e.target.value})} value={details.email}/>
                         </div>
                         <div className ="form-group">
                             <label htmlFor="password">Password:</label>
-                            <input type="text" name="password" id="password" onChange={e => setDetails({...details, password: e.target.value})} value={details.password} autoComplete="off"/>
+                            <input type="password" name="password" id="password" onChange={e => setDetails({...details, password: e.target.value})} value={details.password} />
                         </div>
                     <input type="submit" value="Login" />
                     </div>
